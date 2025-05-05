@@ -32,14 +32,99 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <style>
+        /* Overlay for video */
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+        }
+    </style>
 
     <title>Trade Globe Route</title>
 
 </head>
 
-<body class="overflow-x-hidden">
+<body class="font-sans bg-gray-900 text-white">
 
-    
+
+    <!-- Hero Section -->
+    <section class="relative h-[800px] md:h-screen w-full px-6 lg:px-10">
+        <!-- Header -->
+        <header
+            class="fixed top-3 left-1/2 -translate-x-1/2 w-[90%] z-50 bg-gradient-to-r from-blue-950 to-indigo-900 bg-opacity-80 backdrop-blur-md shadow-lg rounded-full px-5">
+            <div class="max-w-7xl mx-auto px-3 sm:px-6 py-4 flex justify-between items-center">
+                <!-- Logo -->
+                <h1 class="text-xl sm:text-3xl font-bold tracking-wide text-yellow-400 z-10">TradeBridge</h1>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-6 text-white text-sm font-medium uppercase tracking-wide">
+                    <a href="#" class="hover:text-yellow-300 transition">Home</a>
+                    <a href="#" class="hover:text-yellow-300 transition">About</a>
+                    <a href="#" class="hover:text-yellow-300 transition">Services</a>
+                    <a href="#" class="hover:text-yellow-300 transition">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Toggle Button -->
+                <div class="md:hidden z-10 text-white text-3xl cursor-pointer" id="mobile-menu-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="md:hidden absolute top-10 w-full left-0 px-6 pt-16 pb-8 space-y-4 bg-gradient-to-r from-blue-950 to-indigo-900 bg-opacity-80 backdrop-blur-md text-white text-center hidden opacity-0 transition-opacity duration-300 ease-in-out rounded-br-[30px] rounded-bl-[30px]">
+                <a href="#" class="block hover:text-yellow-300">Home</a>
+                <a href="#" class="block hover:text-yellow-300">About</a>
+                <a href="#" class="block hover:text-yellow-300">Services</a>
+                <a href="#" class="block hover:text-yellow-300">Contact</a>
+            </div>
+        </header>
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+            <source src="assets/video/hero-video.mp4" type="video/mp4" />
+        </video>
+
+        <!-- Overlay Content -->
+        <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center px-6">
+            <div
+                class="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl py-14 px-6 md:p-14 max-w-4xl w-full text-center text-white shadow-2xl mt-32 md:mt-48 animate-fade-in-up transition-all duration-700 ease-in-out">
+
+                <!-- Heading -->
+                <h2
+                    class="text-2xl sm:text-4xl md:text-6xl font-extrabold mb-4 text-yellow-300 drop-shadow-md tracking-tight">
+                    Empowering Global Trade
+                </h2>
+
+                <!-- Sub Text -->
+                <p class="text-base md:text-lg text-white/80 mb-8 leading-relaxed">
+                    Unlock seamless logistics and smart export-import networks across borders with our expert-driven
+                    trade solutions.
+                </p>
+
+                <!-- Icon Highlights -->
+                <div class="flex flex-col md:flex-row justify-center gap-6 mb-10 text-yellow-300 text-base md:text-lg">
+                    <div class="flex items-center gap-2 hover:text-yellow-400 transition">
+                        <i class="ri-global-line text-2xl"></i> <span>International Reach</span>
+                    </div>
+                    <div class="flex items-center gap-2 hover:text-yellow-400 transition">
+                        <i class="ri-truck-line text-2xl"></i> <span>Smart Logistics</span>
+                    </div>
+                    <div class="flex items-center gap-2 hover:text-yellow-400 transition">
+                        <i class="ri-leaf-line text-2xl"></i> <span>Agro Trade</span>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="#"
+                    class="inline-block bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold text-lg hover:bg-yellow-300 shadow-xl transition duration-300">
+                    Discover Our Services
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+
+
 
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
